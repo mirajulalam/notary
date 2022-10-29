@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const menuItems =<>
-    <li><NavLink to="/">Home</NavLink></li>
+    <li><NavLink className="bg-secondary text-white font-bold" to="/">Home</NavLink></li>
     </>
     return (
         <div className="navbar sticky top-0 z-50 bg-base-100  mx-auto px-14 shadow-sm">
@@ -16,7 +16,7 @@ const Navbar = () => {
                     {menuItems}
                 </ul>
             </div>
-            <a className="btn btn-ghost normal-case text-2xl text-primary font-bold">Notary Application</a>
+            <a className="btn btn-ghost normal-case text-2xl text-secondary font-bold">Notary Application</a>
         </div>
         <div className="navbar-end hidden lg:flex">
             <ul className="menu menu-horizontal p-0">
