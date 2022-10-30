@@ -3,7 +3,8 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const menuItems =<>
-    <li><NavLink className="bg-secondary text-white font-bold" to="/">Home</NavLink></li>
+    <li><NavLink className="bg-secondary text-white font-bold mr-4" to="/">Home</NavLink></li>
+    <li><NavLink className="bg-secondary text-white font-bold" to="/tasklist">TaskList</NavLink></li>
     </>
     return (
         <div className="navbar sticky top-0 z-50 bg-base-100  mx-auto px-14 shadow-sm">
