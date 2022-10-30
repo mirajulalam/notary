@@ -7,7 +7,7 @@ const EditTask = () => {
     const [taskList,setTaskList]=useState({});
 
     useEffect(()=>{
-        const uri =`http://localhost:5000/allTask/${id}`
+        const uri =` http://demo2211087.mockable.io/allTask/${id}`
         fetch(uri)
         .then(res => res.json())
         .then(data => setTaskList(data))
@@ -24,7 +24,7 @@ const EditTask = () => {
             date
         }
         // send data  server
-        const uri =`http://localhost:5000/task/${id}`;
+        const uri =` http://demo2211087.mockable.io/mock/${id}`;
         fetch(uri, {
             method: "PUT",
             headers: {

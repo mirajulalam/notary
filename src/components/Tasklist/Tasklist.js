@@ -7,7 +7,7 @@ const Tasklist = () => {
     const [allTask,setAllTask]=useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/allTask',{
+        fetch(' http://demo2211087.mockable.io/allTask',{
             method:"GET"
         })
         .then(res => res.json())

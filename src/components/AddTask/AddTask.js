@@ -10,12 +10,12 @@ const AddTask = () => {
         event.preventDefault();
         const task=event.target.task.value;
         const date=event.target.date.value;
-        console.log(date);
+
         const addTask ={
             task,
             date
         }
-        fetch('http://localhost:5000/task', {
+        fetch('http://demo2211087.mockable.io/mock', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
