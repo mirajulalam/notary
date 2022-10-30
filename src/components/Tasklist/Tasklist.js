@@ -13,12 +13,13 @@ const Tasklist = () => {
         .then(data => setAllTask(data))
     })
     return (
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto h-screen">
   <table className="table w-full">
     <thead>
       <tr>
         <th>SR</th>
-        <th>task</th>
+        <th>Task</th>
+        <th>Date</th>
       </tr>
     </thead>
     <tbody>
@@ -26,6 +27,7 @@ const Tasklist = () => {
             allTask.map((list,index)=> <tr key={list._id}>
                   <th>{index+1}</th>
                   <td>{list.task}</td>
+                  <td>{list.date}</td>
             </tr>
             )
         }

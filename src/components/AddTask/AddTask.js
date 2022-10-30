@@ -1,13 +1,16 @@
 import React from 'react';
+import swal from 'sweetalert';
 
 const AddTask = () => {
 
     const handleSubmit =event=>{
         event.preventDefault();
         const task=event.target.task.value;
-        console.log(task);
+        const date=event.target.date.value;
+        console.log(date);
         const addTask ={
             task,
+            date
         }
         fetch('http://localhost:5000/task', {
             method: "POST",
@@ -19,6 +22,7 @@ const AddTask = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data,'successfully added');
+                swal("Successfully", "Task added successfull", "success");
                 event.target.reset();
             })
     }
@@ -37,6 +41,12 @@ const AddTask = () => {
             <span className="label-text">Task</span>
           </label>
           <input type="text" name='task' placeholder="Task" className="input input-bordered" />
+        </div>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Date</span>
+          </label>
+          <input type="date" name='date' placeholder="Date" className="input input-bordered" />
         </div>
         <div className="form-control mt-6">
           <button type='submit' className="btn btn-secondary text-white">Submit</button>
