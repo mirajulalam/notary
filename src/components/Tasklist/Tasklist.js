@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Tasklist = () => {
     const [allTask,setAllTask]=useState([]);
@@ -20,6 +21,7 @@ const Tasklist = () => {
         <th>SR</th>
         <th>Task</th>
         <th>Date</th>
+        <th>Edit</th>
       </tr>
     </thead>
     <tbody>
@@ -28,6 +30,7 @@ const Tasklist = () => {
                   <th>{index+1}</th>
                   <td>{list.task}</td>
                   <td>{list.date}</td>
+                  <td><Link to={`/edit/${list._id}`}><button className='btn btn-secondary btn-sm'>Edit</button></Link></td>
             </tr>
             )
         }
